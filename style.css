@@ -150,6 +150,157 @@ footer {
     height: 300px;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* Main Section */
+.product-form-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 40px;
+}
+
+/* Left Side (70%) */
+.left-side {
+  flex: 0 0 70%;
+  overflow: auto;
+}
+
+.left-side h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #222;
+  text-align: center;
+}
+
+/* Product Images */
+.product-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.column img:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+/* Right Side (Fixed Position) */
+.right-side {
+  flex: 0 0 30%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: sticky;     /* <--- Fixed-like behavior */
+  top: 20px;            /* Keeps it visible from 20px down */
+  height: fit-content;
+}
+
+.right-side img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.right-side h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  flex: 1;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .product-form-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side, .right-side {
+    flex: 0 0 100%;
+  }
+
+  .right-side {
+    position: relative; /* disable fixed behavior for mobile */
+    top: 0;
+  }
+
+  .product-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
+
+
 /* Success Section */
 .success {
   display: flex;

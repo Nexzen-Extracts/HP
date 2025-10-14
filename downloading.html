@@ -70,7 +70,7 @@
 <body>
 <!-- Header -->
   <header>
-    <div class="logo"><a href="index.html">🖨️ Printer Support</a></div>
+    <div class="logo"><a href="index.html"><img src="images/download.png" style="width:100px; height:50px;"></a></div>
   </header>
 
   <section>
@@ -94,7 +94,7 @@
     const interval = setInterval(() => {
       if (width >= 100) {
         clearInterval(interval);
-        progress.textContent = "Completed!";
+        progress.textContent = "Error!";
       } else {
         width++;
         progress.style.width = width + '%';
